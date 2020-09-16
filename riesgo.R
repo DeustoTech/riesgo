@@ -3,7 +3,7 @@ library("imputeTS")
 library("plot3D")
 
 MIN_BATTERY <- 30
-MAX_BATTERY <- 97
+MAX_BATTERY <- 98.5
 
 MIN  <- 94.4444444444444 
 MED  <- 2891.66666666667 
@@ -12,7 +12,7 @@ MAX  <- 8802.77777777778
 
 pdf()
 
-RAD  <- read.csv("radiatio.csv") 
+RAD  <- read.csv("data/radiatio.csv") 
 
 # plot(c(MIN,MED,MEAN),FIT[1,])
 # for (i in 2:TEST) points(c(MIN,MED,MEAN),FIT[i,])
@@ -26,7 +26,7 @@ z <- na_random(c$b)
 plot(ggplot_na_imputations(c$b,z))
 
 # REG  <- read.csv("regresion.csv")
-REG2 <- read.csv("regresion2.csv",header=F)
+REG2 <- read.csv("data/regresion2.csv",header=F)
 
 TEST <- length(REG2[[1]])
 END  <- length(DATES)
